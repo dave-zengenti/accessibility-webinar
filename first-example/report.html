@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Report a problem — Northcombe District Council</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="logo.svg" alt="">
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <button class="search-btn" type="button">
+          <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="container breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+    <a href="report-it.html">Report it</a>
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+    <span>Report a problem</span>
+  </nav>
+
+  <main class="container main-two-col">
+    <section class="form-column">
+      <h1>Report a problem</h1>
+      <p>Use this form to tell us about a problem in your area, such as a pothole, fly-tipping or a broken streetlight. We'll make sure it reaches the right team.</p>
+
+      <form id="report-form">
+        <div class="fields">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder="Full name">
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="field">
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+          </div>
+          <div class="field">
+            <select id="type" name="type">
+              <option value="" disabled selected>Problem type</option>
+              <option value="pothole">Pothole</option>
+              <option value="flytipping">Fly-tipping</option>
+              <option value="streetlight">Broken streetlight</option>
+              <option value="graffiti">Graffiti</option>
+              <option value="parking">Illegal parking</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <textarea id="description" name="description" placeholder="Description"></textarea>
+          </div>
+          <div class="field file-field">
+            <input type="file" id="photo" name="photo">
+            <label for="photo">Add a photo</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Send report</button>
+      </form>
+    </section>
+
+    <aside class="aside">
+      <div class="help-card">
+        <h3>Need help?</h3>
+        <p>Call us on 01632 960 123</p>
+        <p class="muted">Monday to Friday, 9am to 5pm</p>
+        <p><a href="mailto:help@northcombe.gov.uk">help@northcombe.gov.uk</a></p>
+      </div>
+      <div class="next-card">
+        <h3>What happens next</h3>
+        <p class="muted">We'll email you a reference number so you can track your report. Most issues are assessed within 5 working days.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-crest">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l8-4 8 4v14"></path><path d="M9 21v-6h6v6"></path></svg>
+          </span>
+          Northcombe District Council
+        </div>
+        <div class="social">
+          <a href="https://facebook.com" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://twitter.com" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+          </a>
+          <a href="https://instagram.com" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://youtube.com" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"></path><polygon points="10 15 15 12 10 9"></polygon></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3>Services</h3>
+          <a href="bins.html">Bins &amp; recycling</a>
+          <a href="council-tax.html">Council tax</a>
+          <a href="planning.html">Planning &amp; building</a>
+          <a href="roads.html">Roads &amp; parking</a>
+        </div>
+        <div class="footer-col">
+          <h3>Your council</h3>
+          <a href="about.html">About the council</a>
+          <a href="news.html">News &amp; updates</a>
+          <a href="jobs.html">Jobs &amp; careers</a>
+          <a href="meetings.html">Meetings &amp; agendas</a>
+        </div>
+        <div class="footer-col">
+          <h3>Help</h3>
+          <a href="contact.html">Contact us</a>
+          <a href="report.html">Report a problem</a>
+          <a href="pay.html">Make a payment</a>
+          <a href="accessibility.html">Accessibility statement</a>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <a href="newsletter.html">Newsletter sign-up</a>
+          <a href="consultations.html">Consultations</a>
+          <a href="volunteer.html">Get involved</a>
+          <a href="sitemap.html">Site map</a>
+        </div>
+      </div>
+      <div class="footer-fine">
+        <p>&copy; 2026 Northcombe District Council. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy policy</a> &nbsp; &middot; &nbsp; <a href="cookies.html">Cookies</a> &nbsp; &middot; &nbsp; <a href="terms.html">Terms</a> &nbsp; &middot; &nbsp; <a href="accessibility.html">Accessibility</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="confirmation" class="dialog" role="dialog" aria-labelledby="dialog-title" aria-modal="true" hidden>
+    <button type="button" class="dialog-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <div class="dialog-content">
+      <div class="success-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h2 id="dialog-title" class="dialog-title">Thanks, your report has been sent</h2>
+      <p class="dialog-body">We've received your report and emailed a reference number to you. Our team will be in touch within 5 working days.</p>
+    </div>
+  </div>
+  <div class="dialog-backdrop" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

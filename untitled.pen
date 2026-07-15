@@ -1,0 +1,3363 @@
+{
+  "version": "2.14",
+  "children": [
+    {
+      "type": "frame",
+      "id": "PA0Pc",
+      "x": 1120,
+      "y": 0,
+      "name": "Component / Header",
+      "reusable": true,
+      "width": 1440,
+      "fill": "$color-bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "RqIaU",
+          "name": "Top Accent",
+          "fill": "$color-teal",
+          "width": "fill_container",
+          "height": 4
+        },
+        {
+          "type": "frame",
+          "id": "a2P6xQ",
+          "name": "Header Row",
+          "width": "fill_container",
+          "padding": [
+            18,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "UMZ4Q",
+              "name": "Brand",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "K5IHp",
+                  "name": "Crest",
+                  "width": 42,
+                  "height": 42,
+                  "fill": "$color-teal",
+                  "cornerRadius": 10,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "omHX4",
+                      "name": "Crest Icon",
+                      "width": 23,
+                      "height": 23,
+                      "icon": "landmark",
+                      "library": "lucide",
+                      "fill": "$color-on-teal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KQc4k",
+                  "name": "Wordmark",
+                  "layout": "vertical",
+                  "gap": 1,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w8AFuB",
+                      "name": "WM Line 1",
+                      "fill": "$color-heading",
+                      "content": "Northcombe",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 18,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r2BFC",
+                      "name": "WM Line 2",
+                      "fill": "$color-teal",
+                      "content": "DISTRICT COUNCIL",
+                      "lineHeight": 1.1,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10.5,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gRRYo",
+              "name": "Nav",
+              "gap": 30,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CNoG2",
+                  "name": "Nav Home",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fV5og",
+                      "name": "Label",
+                      "fill": "$color-teal",
+                      "content": "Home",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "bWrWW",
+                      "name": "Active Bar",
+                      "fill": "$color-teal",
+                      "width": 22,
+                      "height": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "X1aKpN",
+                  "name": "Nav Services",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YivEe",
+                      "name": "Label",
+                      "fill": "$color-heading",
+                      "content": "Services",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "eEih9",
+                  "name": "Nav News",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x8MMZg",
+                      "name": "Label",
+                      "fill": "$color-heading",
+                      "content": "News",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e7jRiK",
+                  "name": "Nav Contact",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PSEa9",
+                      "name": "Label",
+                      "fill": "$color-heading",
+                      "content": "Contact",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "ONVuI",
+                  "name": "Divider",
+                  "fill": "$color-border",
+                  "width": 1,
+                  "height": 20
+                },
+                {
+                  "type": "icon",
+                  "id": "baQqA",
+                  "name": "Search",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "$color-heading"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Ss2WV",
+      "x": 2680,
+      "y": 0,
+      "name": "Component / Footer",
+      "reusable": true,
+      "width": 1440,
+      "fill": "$color-teal-dark",
+      "layout": "vertical",
+      "gap": 36,
+      "padding": [
+        56,
+        120,
+        30,
+        120
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "Z7j38",
+          "name": "Top Row",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "X3SeuJ",
+              "name": "Footer Brand",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "TMAGQ",
+                  "name": "Crest",
+                  "width": 38,
+                  "height": 38,
+                  "fill": "$color-on-teal",
+                  "cornerRadius": 9,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "K3R2A9",
+                      "name": "Crest Icon",
+                      "width": 21,
+                      "height": 21,
+                      "icon": "landmark",
+                      "library": "lucide",
+                      "fill": "$color-teal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "b4A1h",
+                  "name": "Footer Wordmark",
+                  "fill": "$color-on-teal",
+                  "content": "Northcombe District Council",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V3TlBh",
+              "name": "Social",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "F0oSA",
+                  "name": "Social facebook",
+                  "width": 38,
+                  "height": 38,
+                  "fill": "#13616F",
+                  "cornerRadius": 19,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "OmRZZ",
+                      "name": "Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "facebook",
+                      "library": "lucide",
+                      "fill": "$color-on-teal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fopr5",
+                  "name": "Social twitter",
+                  "width": 38,
+                  "height": 38,
+                  "fill": "#13616F",
+                  "cornerRadius": 19,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "Asdh1",
+                      "name": "Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "twitter",
+                      "library": "lucide",
+                      "fill": "$color-on-teal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G37Y6",
+                  "name": "Social instagram",
+                  "width": 38,
+                  "height": 38,
+                  "fill": "#13616F",
+                  "cornerRadius": 19,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "y9nXkX",
+                      "name": "Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "instagram",
+                      "library": "lucide",
+                      "fill": "$color-on-teal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tyzGp",
+                  "name": "Social youtube",
+                  "width": 38,
+                  "height": 38,
+                  "fill": "#13616F",
+                  "cornerRadius": 19,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "I2zVt",
+                      "name": "Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "youtube",
+                      "library": "lucide",
+                      "fill": "$color-on-teal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "RRGnl",
+          "name": "Divider",
+          "fill": "#1C6470",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "qhs4J",
+          "name": "Columns",
+          "width": "fill_container",
+          "gap": 48,
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "uApvq",
+              "name": "Col Services",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qcRil",
+                  "name": "Heading",
+                  "fill": "$color-on-teal",
+                  "content": "SERVICES",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "DFDdj",
+                  "name": "Bins & recycling",
+                  "fill": "$color-footer-link",
+                  "content": "Bins & recycling",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "LyOKN",
+                  "name": "Council tax",
+                  "fill": "$color-footer-link",
+                  "content": "Council tax",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "TAFzj",
+                  "name": "Planning & building",
+                  "fill": "$color-footer-link",
+                  "content": "Planning & building",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "QMmu4",
+                  "name": "Roads & parking",
+                  "fill": "$color-footer-link",
+                  "content": "Roads & parking",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UoOXG",
+              "name": "Col Your council",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SccsV",
+                  "name": "Heading",
+                  "fill": "$color-on-teal",
+                  "content": "YOUR COUNCIL",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "cMrtI",
+                  "name": "About the council",
+                  "fill": "$color-footer-link",
+                  "content": "About the council",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RW5aQ",
+                  "name": "News & updates",
+                  "fill": "$color-footer-link",
+                  "content": "News & updates",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "WnuZB",
+                  "name": "Jobs & careers",
+                  "fill": "$color-footer-link",
+                  "content": "Jobs & careers",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "YPViE",
+                  "name": "Meetings & agendas",
+                  "fill": "$color-footer-link",
+                  "content": "Meetings & agendas",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lOoRA",
+              "name": "Col Help",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oiVKR",
+                  "name": "Heading",
+                  "fill": "$color-on-teal",
+                  "content": "HELP",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "bJ7eI",
+                  "name": "Contact us",
+                  "fill": "$color-footer-link",
+                  "content": "Contact us",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Tc1yn",
+                  "name": "Report a problem",
+                  "fill": "$color-footer-link",
+                  "content": "Report a problem",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "qbzuT",
+                  "name": "Make a payment",
+                  "fill": "$color-footer-link",
+                  "content": "Make a payment",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CfSkA",
+                  "name": "Accessibility statement",
+                  "fill": "$color-footer-link",
+                  "content": "Accessibility statement",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DhXyR",
+              "name": "Col Connect",
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NlVNs",
+                  "name": "Heading",
+                  "fill": "$color-on-teal",
+                  "content": "CONNECT",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "EpvBo",
+                  "name": "Newsletter sign-up",
+                  "fill": "$color-footer-link",
+                  "content": "Newsletter sign-up",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "DkvoC",
+                  "name": "Consultations",
+                  "fill": "$color-footer-link",
+                  "content": "Consultations",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "l5Epi",
+                  "name": "Get involved",
+                  "fill": "$color-footer-link",
+                  "content": "Get involved",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "JjYuf",
+                  "name": "Site map",
+                  "fill": "$color-footer-link",
+                  "content": "Site map",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "CnC3j",
+          "name": "Divider 2",
+          "fill": "#1C6470",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "MVlHx",
+          "name": "Fine Print",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "pNshe",
+              "name": "Copyright",
+              "fill": "$color-footer-faint",
+              "content": "© 2026 Northcombe District Council. All rights reserved.",
+              "fontFamily": "$font-sans",
+              "fontSize": 12.5,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "vf9QX",
+              "name": "Legal Links",
+              "fill": "$color-footer-faint",
+              "content": "Privacy policy    ·    Cookies    ·    Terms    ·    Accessibility",
+              "fontFamily": "$font-sans",
+              "fontSize": 12.5,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "fPbp7",
+      "x": 4280,
+      "y": 0,
+      "name": "Homepage — Northcombe District Council",
+      "clip": true,
+      "width": 1440,
+      "fill": "$color-bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "N3RtD5",
+          "type": "ref",
+          "ref": "PA0Pc",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "f1oAC",
+          "name": "Section / Hero",
+          "clip": true,
+          "width": "fill_container",
+          "height": 560,
+          "fill": "$color-bg",
+          "layout": "vertical",
+          "padding": 120,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "FB0g2",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 0,
+              "name": "Hero Background Photo",
+              "metadata": {
+                "type": "unsplash",
+                "username": "marik_m",
+                "link": "https://unsplash.com/@marik_m",
+                "author": "Davyd Markovskyi"
+              },
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1603113232460-e4f9387aef85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjYzMTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "width": 1440,
+              "height": 560
+            },
+            {
+              "type": "rectangle",
+              "id": "B0LYnU",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 0,
+              "name": "Hero White Veil",
+              "fill": "#FFFFFFE3",
+              "width": 1440,
+              "height": 560
+            },
+            {
+              "type": "frame",
+              "id": "DV9KK",
+              "name": "Hero Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kwnvt",
+                  "name": "Hero Heading",
+                  "fill": "$color-heading",
+                  "textGrowth": "fixed-width",
+                  "width": 640,
+                  "content": "Council services, all in one place",
+                  "lineHeight": 1.05,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 60,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "YFobJ",
+                  "name": "Hero Intro",
+                  "fill": "$color-muted",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "Find information, pay for services and report problems across the Northcombe district — all from one place.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "D2J6ka",
+          "name": "Section / Action Cards",
+          "width": "fill_container",
+          "fill": "$color-bg",
+          "layout": "vertical",
+          "padding": [
+            72,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "h0xi6Y",
+              "name": "Cards Row",
+              "width": "fill_container",
+              "height": 265,
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "djn61",
+                  "name": "Card / Report it",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1A1A1A14",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OcH8z",
+                      "name": "Icon Badge",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$color-teal-tint",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "EoRqc",
+                          "name": "Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "triangle-alert",
+                          "library": "lucide",
+                          "fill": "$color-teal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bRaxt",
+                      "name": "Text",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "u8zWZT",
+                          "name": "Label",
+                          "fill": "$color-heading",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Report it",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Zm5rk",
+                          "name": "Line",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Potholes, fly-tipping, broken streetlights and more.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vMbze",
+                  "name": "Card / Pay",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1A1A1A14",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "t33CW",
+                      "name": "Icon Badge",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$color-teal-tint",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "wluHw",
+                          "name": "Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "credit-card",
+                          "library": "lucide",
+                          "fill": "$color-teal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UFe67",
+                      "name": "Text",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "OVUAd",
+                          "name": "Label",
+                          "fill": "$color-heading",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Pay",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "x9jGg5",
+                          "name": "Line",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Council tax, parking fines, rent and invoices.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IEVsK",
+                  "name": "Card / Find your bin day",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1A1A1A14",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": 32,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HjHEz",
+                      "name": "Icon Badge",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "$color-teal-tint",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "W51HCr",
+                          "name": "Icon",
+                          "width": 24,
+                          "height": 24,
+                          "icon": "trash-2",
+                          "library": "lucide",
+                          "fill": "$color-teal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hDGbL",
+                      "name": "Text",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 6,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "z7uxWf",
+                          "name": "Label",
+                          "fill": "$color-heading",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Find your bin day",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 20,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z2RJoD",
+                          "name": "Line",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Check your collection day and what goes where.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CF95Y",
+                      "name": "Postcode Search",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Q1FRu",
+                          "name": "Input",
+                          "width": "fill_container",
+                          "fill": "$color-bg",
+                          "cornerRadius": 8,
+                          "stroke": "$color-border",
+                          "strokeWidth": 1,
+                          "strokeAlignment": "inner",
+                          "padding": [
+                            11,
+                            14
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cAtpM",
+                              "name": "Placeholder",
+                              "fill": "$color-muted",
+                              "content": "Enter your postcode",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hS1mR",
+                          "name": "Search Button",
+                          "fill": "$color-teal",
+                          "cornerRadius": 8,
+                          "padding": [
+                            11,
+                            16
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WJIBw",
+                              "name": "Search Label",
+                              "fill": "$color-on-teal",
+                              "content": "Search",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HywW9",
+          "name": "Section / Popular Services",
+          "width": "fill_container",
+          "fill": "$color-section",
+          "layout": "vertical",
+          "gap": 44,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "f58LP",
+              "name": "Section Header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "b84o5S",
+                  "name": "Heading",
+                  "fill": "$color-heading",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Popular services",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 34,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "GqNUf",
+                  "name": "Subtitle",
+                  "fill": "$color-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Quick access to the services our residents use most.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "PPBaE",
+              "name": "Tabs + Panel",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pUNDU",
+                  "name": "Tabs",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "VfblI",
+                      "name": "Tabs Row",
+                      "width": "fill_container",
+                      "gap": 40,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wby9Y",
+                          "name": "Tab Housing",
+                          "stroke": "$color-teal",
+                          "strokeWidth": {
+                            "bottom": 3
+                          },
+                          "strokeAlignment": "inner",
+                          "layout": "vertical",
+                          "padding": [
+                            0,
+                            4,
+                            14,
+                            4
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "wjI8U",
+                              "name": "Label",
+                              "fill": "$color-teal",
+                              "content": "Housing",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 17,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "fYFve",
+                          "name": "Tab Planning",
+                          "layout": "vertical",
+                          "padding": [
+                            0,
+                            4,
+                            14,
+                            4
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "OUfTw",
+                              "name": "Label",
+                              "fill": "$color-muted",
+                              "content": "Planning",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 17,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "krg3p",
+                          "name": "Tab Roads & parking",
+                          "layout": "vertical",
+                          "padding": [
+                            0,
+                            4,
+                            14,
+                            4
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "o4Smo",
+                              "name": "Label",
+                              "fill": "$color-muted",
+                              "content": "Roads & parking",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 17,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "GGE3L",
+                      "name": "Tab Divider",
+                      "fill": "$color-border",
+                      "width": "fill_container",
+                      "height": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WcEV6",
+                  "name": "Housing Panel",
+                  "width": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1A1A1A14",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 24,
+                    "spread": -6
+                  },
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": 40,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZnuDW",
+                      "name": "Intro",
+                      "fill": "$color-heading",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Find information and apply for council housing, report repairs, and get support with your tenancy — all in one place.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uv81W",
+                      "name": "Links Grid",
+                      "width": "fill_container",
+                      "gap": 48,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MJJZT",
+                          "name": "Column 1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "a2ctDE",
+                              "name": "Link Apply for council housing",
+                              "width": "fill_container",
+                              "stroke": "$color-border",
+                              "strokeWidth": {
+                                "bottom": 1
+                              },
+                              "strokeAlignment": "inner",
+                              "gap": 12,
+                              "padding": [
+                                16,
+                                0
+                              ],
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "T0FWQS",
+                                  "name": "Label",
+                                  "fill": "$color-teal",
+                                  "content": "Apply for council housing",
+                                  "fontFamily": "$font-sans",
+                                  "fontSize": 16,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "QSxuO",
+                                  "name": "Chevron",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "chevron-right",
+                                  "library": "lucide",
+                                  "fill": "$color-teal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ib8VL",
+                              "name": "Link Report a repair",
+                              "width": "fill_container",
+                              "stroke": "$color-border",
+                              "strokeWidth": {
+                                "bottom": 1
+                              },
+                              "strokeAlignment": "inner",
+                              "gap": 12,
+                              "padding": [
+                                16,
+                                0
+                              ],
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "r4DCk",
+                                  "name": "Label",
+                                  "fill": "$color-teal",
+                                  "content": "Report a repair",
+                                  "fontFamily": "$font-sans",
+                                  "fontSize": 16,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "SpoYY",
+                                  "name": "Chevron",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "chevron-right",
+                                  "library": "lucide",
+                                  "fill": "$color-teal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "htRSZ",
+                              "name": "Link Housing benefit & support",
+                              "width": "fill_container",
+                              "stroke": "$color-border",
+                              "strokeAlignment": "inner",
+                              "gap": 12,
+                              "padding": [
+                                16,
+                                0
+                              ],
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "P8RalA",
+                                  "name": "Label",
+                                  "fill": "$color-teal",
+                                  "content": "Housing benefit & support",
+                                  "fontFamily": "$font-sans",
+                                  "fontSize": 16,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "G7GvFd",
+                                  "name": "Chevron",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "chevron-right",
+                                  "library": "lucide",
+                                  "fill": "$color-teal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "zBWQn",
+                          "name": "Column 2",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "mxouy",
+                              "name": "Link Homelessness help",
+                              "width": "fill_container",
+                              "stroke": "$color-border",
+                              "strokeWidth": {
+                                "bottom": 1
+                              },
+                              "strokeAlignment": "inner",
+                              "gap": 12,
+                              "padding": [
+                                16,
+                                0
+                              ],
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Tskia",
+                                  "name": "Label",
+                                  "fill": "$color-teal",
+                                  "content": "Homelessness help",
+                                  "fontFamily": "$font-sans",
+                                  "fontSize": 16,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "xME8d",
+                                  "name": "Chevron",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "chevron-right",
+                                  "library": "lucide",
+                                  "fill": "$color-teal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "TbFQX",
+                              "name": "Link Tenancy information",
+                              "width": "fill_container",
+                              "stroke": "$color-border",
+                              "strokeAlignment": "inner",
+                              "gap": 12,
+                              "padding": [
+                                16,
+                                0
+                              ],
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "i3gzy",
+                                  "name": "Label",
+                                  "fill": "$color-teal",
+                                  "content": "Tenancy information",
+                                  "fontFamily": "$font-sans",
+                                  "fontSize": 16,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "m0LIM",
+                                  "name": "Chevron",
+                                  "width": 18,
+                                  "height": 18,
+                                  "icon": "chevron-right",
+                                  "library": "lucide",
+                                  "fill": "$color-teal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SfQ95",
+          "name": "Section / Latest News",
+          "width": "fill_container",
+          "fill": "$color-bg",
+          "layout": "vertical",
+          "gap": 40,
+          "padding": [
+            80,
+            120
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "S7fzw",
+              "name": "Header Row",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hLri1",
+                  "name": "Section Title",
+                  "fill": "$color-heading",
+                  "content": "Latest news",
+                  "lineHeight": 1.2,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "K1kTu",
+                  "name": "View All Link",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rtmEz",
+                      "name": "View All Label",
+                      "fill": "$color-teal",
+                      "content": "View all news",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "HADtP",
+                      "name": "Arrow",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "arrow-right",
+                      "library": "lucide",
+                      "fill": "$color-teal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fgVxs",
+              "name": "Cards Row",
+              "width": "fill_container",
+              "height": 430,
+              "gap": 30,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hqqnt",
+                  "name": "Card / Recycling",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000010",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "KHVEz",
+                      "name": "Photo",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "zoshuacolah",
+                        "link": "https://unsplash.com/@zoshuacolah",
+                        "author": "Zoshua Colah"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1762805544291-cb128cf5ec80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjYyODh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 200
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jcd9X",
+                      "name": "Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "zCIwk",
+                          "name": "Text Group",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "I7kNAK",
+                              "name": "Headline",
+                              "fill": "$color-heading",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "New kerbside recycling scheme rolls out across Northcombe",
+                              "lineHeight": 1.3,
+                              "fontFamily": "$font-sans",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "soarr",
+                              "name": "Summary",
+                              "fill": "$color-muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "New sorting bins arrive from July, making it easier to recycle more from your doorstep.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-sans",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "zQNRJ",
+                          "name": "Read More",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ZvHxy",
+                              "name": "Read More Label",
+                              "fill": "$color-teal",
+                              "content": "Read more",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "thngN",
+                              "name": "Arrow",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "arrow-right",
+                              "library": "lucide",
+                              "fill": "$color-teal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "soden",
+                  "name": "Card / Town Centre",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000010",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "jkblX",
+                      "name": "Photo",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "rasmusandersen",
+                        "link": "https://unsplash.com/@rasmusandersen",
+                        "author": "Rasmus Andersen"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1702795601280-b0abf0468cf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjYyODh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 200
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ds50V",
+                      "name": "Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "mqATc",
+                          "name": "Text Group",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YEKNZ",
+                              "name": "Headline",
+                              "fill": "$color-heading",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Town centre regeneration plans approved by cabinet",
+                              "lineHeight": 1.3,
+                              "fontFamily": "$font-sans",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "exUF4",
+                              "name": "Summary",
+                              "fill": "$color-muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Plans to revitalise the high street with new public spaces, shops and transport links.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-sans",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sfwQH",
+                          "name": "Read More",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "mlI6R",
+                              "name": "Read More Label",
+                              "fill": "$color-teal",
+                              "content": "Read more",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "Eiw5G",
+                              "name": "Arrow",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "arrow-right",
+                              "library": "lucide",
+                              "fill": "$color-teal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HLyuN",
+                  "name": "Card / Grants",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000010",
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "blur": 16
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "eJj4m",
+                      "name": "Photo",
+                      "metadata": {
+                        "type": "unsplash",
+                        "username": "jeisen",
+                        "link": "https://unsplash.com/@jeisen",
+                        "author": "Jeffrey Eisen"
+                      },
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1635336650373-4f62eae207f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjYyODl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      },
+                      "width": "fill_container",
+                      "height": 200
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LU4YK",
+                      "name": "Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 24,
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "H50D8",
+                          "name": "Text Group",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W4rBoc",
+                              "name": "Headline",
+                              "fill": "$color-heading",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Applications open for the spring community grants",
+                              "lineHeight": 1.3,
+                              "fontFamily": "$font-sans",
+                              "fontSize": 20,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "F15k2",
+                              "name": "Summary",
+                              "fill": "$color-muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Local groups can now apply for funding to support community projects this spring.",
+                              "lineHeight": 1.5,
+                              "fontFamily": "$font-sans",
+                              "fontSize": 15,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "aHk9L",
+                          "name": "Read More",
+                          "gap": 6,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "R87qsp",
+                              "name": "Read More Label",
+                              "fill": "$color-teal",
+                              "content": "Read more",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 15,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "ENbui",
+                              "name": "Arrow",
+                              "width": 16,
+                              "height": 16,
+                              "icon": "arrow-right",
+                              "library": "lucide",
+                              "fill": "$color-teal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "DRnbF",
+          "type": "ref",
+          "ref": "Ss2WV",
+          "name": "Footer",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "LOmBm",
+          "layoutPosition": "absolute",
+          "x": 120,
+          "y": 884,
+          "name": "Cookie Consent Bar",
+          "width": 1200,
+          "fill": "$color-bg",
+          "cornerRadius": 14,
+          "stroke": "$color-border",
+          "strokeWidth": 1,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#0A2A3140",
+            "offset": {
+              "x": 0,
+              "y": 18
+            },
+            "blur": 50
+          },
+          "gap": 40,
+          "padding": [
+            22,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "IFwoF",
+              "name": "Cookie Text",
+              "width": "fill_container",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uETBG",
+                  "name": "Cookie Icon Wrap",
+                  "width": 40,
+                  "height": 40,
+                  "fill": "$color-section",
+                  "cornerRadius": 20,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "wA8fu",
+                      "name": "Cookie Icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "cookie",
+                      "library": "lucide",
+                      "fill": "$color-teal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mGAie",
+                  "name": "Cookie Copy",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SS75p",
+                      "name": "Cookie Title",
+                      "fill": "$color-heading",
+                      "content": "We use cookies",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SV3GN",
+                      "name": "Cookie Body",
+                      "fill": "$color-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "We use cookies to make this site work and to help us improve our services. You can accept all cookies or manage your preferences at any time.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j3ePQB",
+              "name": "Cookie Buttons",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "z7ZMe",
+                  "name": "Manage Button",
+                  "fill": "$color-bg",
+                  "cornerRadius": 9,
+                  "stroke": "$color-teal",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IioXS",
+                      "name": "Label",
+                      "fill": "$color-teal",
+                      "content": "Manage",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FE4qo",
+                  "name": "Accept Button",
+                  "fill": "$color-teal",
+                  "cornerRadius": 9,
+                  "padding": [
+                    12,
+                    24
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "b6afEX",
+                      "name": "Label",
+                      "fill": "$color-on-teal",
+                      "content": "Accept all",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "N3i8Y",
+      "x": 5920,
+      "y": 0,
+      "name": "Report a Problem — Northcombe District Council",
+      "clip": true,
+      "width": 1440,
+      "fill": "$color-bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "h7gRN",
+          "type": "ref",
+          "ref": "PA0Pc",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "VuyBf",
+          "name": "Breadcrumb",
+          "width": "fill_container",
+          "fill": "$color-bg",
+          "stroke": "$color-border",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 8,
+          "padding": [
+            16,
+            120
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "w63Wy",
+              "name": "Crumb Home",
+              "fill": "$color-teal",
+              "content": "Home",
+              "fontFamily": "$font-sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "UQfow",
+              "name": "Sep1",
+              "width": 14,
+              "height": 14,
+              "icon": "chevron-right",
+              "library": "lucide",
+              "fill": "$color-muted"
+            },
+            {
+              "type": "text",
+              "id": "Ayhzp",
+              "name": "Crumb Services",
+              "fill": "$color-teal",
+              "content": "Report it",
+              "fontFamily": "$font-sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "QSDAY",
+              "name": "Sep2",
+              "width": 14,
+              "height": 14,
+              "icon": "chevron-right",
+              "library": "lucide",
+              "fill": "$color-muted"
+            },
+            {
+              "type": "text",
+              "id": "QGY2q",
+              "name": "Crumb Current",
+              "fill": "$color-muted",
+              "content": "Report a problem",
+              "fontFamily": "$font-sans",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iyuf0",
+          "name": "Main",
+          "width": "fill_container",
+          "fill": "$color-bg",
+          "padding": [
+            56,
+            120,
+            84,
+            120
+          ],
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "eDIPR",
+              "name": "Form Column",
+              "width": 680,
+              "layout": "vertical",
+              "gap": 26,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FJgXz",
+                  "name": "Page Title",
+                  "fill": "$color-heading",
+                  "content": "Report a problem",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 34,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "qvEKS",
+                  "name": "Intro",
+                  "fill": "$color-muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Use this form to tell us about a problem in your area, such as a pothole, fly-tipping or a broken streetlight. We'll make sure it reaches the right team.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "Zj32N",
+                  "name": "Fields",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ALouI",
+                      "name": "Field Name",
+                      "width": "fill_container",
+                      "fill": "$color-bg",
+                      "cornerRadius": 9,
+                      "stroke": "$color-border",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        15,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Sy9T8",
+                          "name": "Placeholder",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Full name",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gzEyn",
+                      "name": "Field Email",
+                      "width": "fill_container",
+                      "fill": "$color-bg",
+                      "cornerRadius": 9,
+                      "stroke": "$color-border",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        15,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "zSChj",
+                          "name": "Placeholder",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Email address",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n0EQK",
+                      "name": "Field Postcode",
+                      "width": "fill_container",
+                      "fill": "$color-bg",
+                      "cornerRadius": 9,
+                      "stroke": "$color-border",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        15,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oQkOi",
+                          "name": "Placeholder",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Postcode",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L7Mp4",
+                      "name": "Field Type",
+                      "width": "fill_container",
+                      "fill": "$color-bg",
+                      "cornerRadius": 9,
+                      "stroke": "$color-border",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        15,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "I3BCfC",
+                          "name": "Placeholder",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Type of problem",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "LIglY",
+                          "name": "Trailing",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "chevron-down",
+                          "library": "lucide",
+                          "fill": "$color-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CJFml",
+                      "name": "Field Description",
+                      "width": "fill_container",
+                      "height": 150,
+                      "fill": "$color-bg",
+                      "cornerRadius": 9,
+                      "stroke": "$color-border",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "padding": [
+                        14,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "RYsSC",
+                          "name": "Placeholder",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Description",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oVKCj",
+                      "name": "Field Add a photo",
+                      "width": "fill_container",
+                      "fill": "$color-bg",
+                      "cornerRadius": 9,
+                      "stroke": "$color-border",
+                      "strokeWidth": 1,
+                      "gap": 10,
+                      "padding": [
+                        12,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "U3WG1",
+                          "name": "Upload Icon",
+                          "width": 18,
+                          "height": 18,
+                          "icon": "image-plus",
+                          "library": "lucide",
+                          "fill": "$color-muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ik4mY",
+                          "name": "Placeholder",
+                          "fill": "$color-muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Add a photo",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "z5ujXh",
+                          "name": "Choose File",
+                          "fill": "$color-section",
+                          "cornerRadius": 7,
+                          "padding": [
+                            8,
+                            14
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "x9vkOB",
+                              "name": "Label",
+                              "fill": "$color-heading",
+                              "content": "Choose file",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hZHaj",
+                  "name": "Submit Button",
+                  "fill": "$color-teal",
+                  "cornerRadius": 9,
+                  "padding": [
+                    15,
+                    30
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NWehL",
+                      "name": "Label",
+                      "fill": "$color-on-teal",
+                      "content": "Send report",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "T9PJov",
+              "name": "Aside",
+              "width": 360,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "QscQT",
+                  "name": "Help Card",
+                  "width": "fill_container",
+                  "fill": "$color-section",
+                  "cornerRadius": 12,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ogLyD",
+                      "name": "Help Title",
+                      "fill": "$color-heading",
+                      "content": "Need help?",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "mqgv4",
+                      "name": "Help Phone",
+                      "fill": "$color-heading",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Call us on 01632 960 123",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F86G1",
+                      "name": "Help Hours",
+                      "fill": "$color-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Monday to Friday, 9am to 5pm",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cOZDe",
+                      "name": "Help Email",
+                      "fill": "$color-teal",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "[email protected]",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H3bvO",
+                  "name": "Next Card",
+                  "width": "fill_container",
+                  "fill": "$color-bg",
+                  "cornerRadius": 12,
+                  "stroke": "$color-border",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hqIvq",
+                      "name": "Next Title",
+                      "fill": "$color-heading",
+                      "content": "What happens next",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q2kupg",
+                      "name": "Next Body",
+                      "fill": "$color-muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "We'll email you a reference number so you can track your report. Most issues are assessed within 5 working days.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l6eYq2",
+          "type": "ref",
+          "ref": "Ss2WV",
+          "name": "Footer",
+          "width": "fill_container"
+        },
+        {
+          "type": "rectangle",
+          "id": "OTwcq",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "name": "Modal Scrim",
+          "fill": "#08272Db3",
+          "width": 1440,
+          "height": 1387
+        },
+        {
+          "type": "frame",
+          "id": "H3NCg",
+          "layoutPosition": "absolute",
+          "x": 490,
+          "y": 236,
+          "name": "Confirmation Dialog",
+          "width": 460,
+          "fill": "$color-bg",
+          "cornerRadius": 16,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#0A2A3140",
+            "offset": {
+              "x": 0,
+              "y": 24
+            },
+            "blur": 60
+          },
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            44,
+            40,
+            40,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "O67Jxf",
+              "name": "Success Badge",
+              "width": 64,
+              "height": 64,
+              "fill": "$color-teal",
+              "cornerRadius": 32,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "nKb1K",
+                  "name": "Check",
+                  "width": 32,
+                  "height": 32,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$color-on-teal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "TRsaF",
+              "name": "Dialog Title",
+              "fill": "$color-heading",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Thanks, your report has been sent",
+              "lineHeight": 1.3,
+              "textAlign": "center",
+              "fontFamily": "$font-sans",
+              "fontSize": 21,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "EKqgb",
+              "name": "Dialog Body",
+              "fill": "$color-muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "We've received your report and emailed a reference number to you. Our team will be in touch within 5 working days.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "$font-sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "y076TL",
+              "layoutPosition": "absolute",
+              "x": 412,
+              "y": 12,
+              "name": "Close Button",
+              "width": 36,
+              "height": 36,
+              "cornerRadius": 18,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "sVmFt",
+                  "name": "Close X",
+                  "width": 20,
+                  "height": 20,
+                  "icon": "x",
+                  "library": "lucide",
+                  "fill": "$color-muted"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "Mode": [
+      "Light",
+      "Dark"
+    ]
+  },
+  "variables": {
+    "--sidebar": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#18181b",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#fafafa"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#ffffff1a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2a2a30",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#18181b"
+        },
+        {
+          "value": "#fafafa",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--sidebar-ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#71717a"
+        },
+        {
+          "value": "#71717a",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--background": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--card-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FFFFFF"
+        },
+        {
+          "value": "#1A1A1A",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--popover-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#FF8400"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--primary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E7E8E5"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--secondary-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#FFFFFF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--muted-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#B8B9B6",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#F2F3F0"
+        },
+        {
+          "value": "#111111",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--accent-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#111111"
+        },
+        {
+          "value": "#F2F3F0",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--destructive": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#D93C15"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--border": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--input": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#CBCCC9"
+        },
+        {
+          "value": "#2E2E2E",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--ring": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#666666"
+        },
+        {
+          "value": "#666666",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "--black": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "--font-primary": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "--font-secondary": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "--radius-none": {
+      "type": "number",
+      "value": 0
+    },
+    "--radius-pill": {
+      "type": "number",
+      "value": 999
+    },
+    "--color-success": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFE6E1"
+        },
+        {
+          "value": "#222924",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-success-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#004D1A"
+        },
+        {
+          "value": "#B6FFCE",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E9E3D8"
+        },
+        {
+          "value": "#291C0F",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-warning-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#804200"
+        },
+        {
+          "value": "#FF8400",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#E5DCDA"
+        },
+        {
+          "value": "#24100B",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-error-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#8C1C00"
+        },
+        {
+          "value": "#FF5C33",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#DFDFE6"
+        },
+        {
+          "value": "#222229",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--color-info-foreground": {
+      "type": "color",
+      "value": [
+        {
+          "value": "#000066"
+        },
+        {
+          "value": "#B2B2FF",
+          "theme": {
+            "Mode": "Dark"
+          }
+        }
+      ]
+    },
+    "--radius-m": {
+      "type": "number",
+      "value": 16
+    },
+    "color-teal": {
+      "type": "color",
+      "value": "#0F5C6B"
+    },
+    "color-teal-dark": {
+      "type": "color",
+      "value": "#0A4651"
+    },
+    "color-amber": {
+      "type": "color",
+      "value": "#E8A33D"
+    },
+    "color-bg": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-section": {
+      "type": "color",
+      "value": "#F4F6F7"
+    },
+    "color-heading": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "color-muted": {
+      "type": "color",
+      "value": "#9AA0A6"
+    },
+    "color-on-teal": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "color-border": {
+      "type": "color",
+      "value": "#E3E7E9"
+    },
+    "color-footer-link": {
+      "type": "color",
+      "value": "#DCE6E8"
+    },
+    "color-footer-faint": {
+      "type": "color",
+      "value": "#5E868F"
+    },
+    "font-sans": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "color-teal-tint": {
+      "type": "color",
+      "value": "#0F5C6B1F"
+    }
+  },
+  "fileToken": "adc89db0-364c-443a-a126-5b3871c97411"
+}
