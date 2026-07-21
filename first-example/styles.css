@@ -231,8 +231,16 @@ a {
 
 .postcode-search {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-top: auto;
+}
+
+.postcode-label {
+  flex-basis: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--heading);
 }
 
 .postcode-search input {
