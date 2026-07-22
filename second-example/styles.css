@@ -952,3 +952,99 @@ a {
   flex: none;
   max-width: none;
 }
+
+/* -------------------------------------------------------------------
+   AMPLIFIED OVERLAP
+
+   Every section below is given a fixed height with overflow visible,
+   while its contents are sized in vw. At 100% zoom the contents fit
+   inside their section. Halve the viewport and they grow well past it,
+   so each section spills over the one beneath and the page stacks up
+   on itself. Sibling cards also carry a vw negative margin that
+   cancels the gap and then some, so they slide on top of each other.
+   ------------------------------------------------------------------- */
+
+/* Hero: narrower panel and a large fixed heading, so it wraps hard and
+   buries the cards underneath it. */
+.hero-content {
+  width: 55vw;
+  top: 44px;
+}
+
+.hero-content h1 {
+  font-size: 72px;
+}
+
+/* Fixed-height sections: each one overflows into the next. */
+.action-cards {
+  height: 440px;
+  overflow: visible;
+}
+
+.popular-services {
+  height: 660px;
+  overflow: visible;
+}
+
+.latest-news {
+  height: 700px;
+  overflow: visible;
+}
+
+/* Headings that wrap much harder once their vw-sized box shrinks. */
+.card-text h2 {
+  font-size: 26px;
+}
+
+.news-body h3 {
+  font-size: 26px;
+}
+
+.tab-panel {
+  width: 70vw;
+}
+
+/* Sibling cards pile on top of each other: at full width this resolves
+   to roughly zero, but it goes sharply negative as the viewport narrows. */
+.action-card + .action-card,
+.news-card + .news-card {
+  margin-left: calc(13vw - 166px);
+}
+
+/* -------------------------------------------------------------------
+   COLLAPSING TEXT SPACING
+
+   line-height and letter-spacing are both derived from vw, so they
+   resolve to normal values at full width and crush together as the
+   viewport halves. At 200% zoom the lines close up and overlap each
+   other and the letters run together. Nothing in an automated scan
+   covers text spacing (WCAG 1.4.12), so the score is unaffected.
+   ------------------------------------------------------------------- */
+
+.hero-content h1 {
+  line-height: calc(4vw + 25px);
+  letter-spacing: calc(0.7vw - 8.9px);
+}
+
+.hero-intro {
+  line-height: calc(1.6vw + 9px);
+  letter-spacing: calc(0.15vw - 1.9px);
+}
+
+.section-header h2 {
+  line-height: calc(2vw + 12px);
+  letter-spacing: calc(0.25vw - 3.2px);
+}
+
+.card-text h2,
+.news-body h3 {
+  line-height: calc(1.5vw + 8px);
+  letter-spacing: calc(0.2vw - 2.5px);
+}
+
+.card-text p,
+.news-summary,
+.tab-panel p {
+  line-height: calc(1.3vw + 6px);
+  letter-spacing: calc(0.15vw - 1.9px);
+}
