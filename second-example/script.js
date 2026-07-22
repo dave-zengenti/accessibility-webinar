@@ -59,4 +59,32 @@ document.addEventListener('DOMContentLoaded', () => {
   searchBtn?.addEventListener('click', () => {
     // intentionally no accessible behaviour
   });
+
+  // "Select a service" dropdown: MOUSE ONLY by design.
+  // Click handlers only, no keydown/keyup, and nothing inside is focusable,
+  // so Tab skips the whole control and a keyboard user can never open it.
+  const dropdown = document.querySelector('[data-dropdown]');
+  if (dropdown) {
+    const toggle = dropdown.querySelector('[data-dropdown-toggle]');
+    const menu = dropdown.querySelector('[data-dropdown-menu]');
+    const value = dropdown.querySelector('.dropdown-value');
+
+    function setOpen(open) {
+      menu.hidden = !open;
+      dropdown.classList.toggle('open', open);
+    }
+
+    toggle.addEventListener('click', () => setOpen(menu.hidden));
+
+    menu.querySelectorAll('.dropdown-option').forEach(option => {
+      option.addEventListener('click', () => {
+        value.textContent = option.textContent;
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener('click', e => {
+      if (!dropdown.contains(e.target)) setOpen(false);
+    });
+  }
 });

@@ -35,7 +35,7 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-content">
         <h1>Council services, all in one place</h1>
-        <p class="hero-intro">Find information, pay for services and report problems across the Northcombe district —
+        <p class="hero-intro">Find information, pay for services and report problems across the Northcombe district,
           all from one place.</p>
       </div>
     </section>
@@ -69,11 +69,30 @@
               </svg>
             </span>
             <div class="card-text">
-              <h2>Pay</h2>
-              <p>Pay council tax, parking fines and other council charges.</p>
+              <h2>Select a service</h2>
+              <p>Choose a service from the dropdown to find out more.</p>
             </div>
           </div>
-          <a href="pay.html" class="card-link">Make a payment</a>
+          <!-- Mouse-only custom dropdown: no tabindex, no roles, click-only handlers.
+               Keyboard users cannot reach or operate it; Tab skips straight past. -->
+          <div class="service-select">
+            <span class="service-select-label">Select a service</span>
+            <div class="dropdown" data-dropdown>
+              <div class="dropdown-toggle" data-dropdown-toggle>
+                <span class="dropdown-value">Choose a service</span>
+                <svg class="dropdown-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </div>
+              <ul class="dropdown-menu" data-dropdown-menu hidden>
+                <li class="dropdown-option" data-value="council-tax">Council tax</li>
+                <li class="dropdown-option" data-value="parking-fine">Parking fine</li>
+                <li class="dropdown-option" data-value="council-rent">Council rent</li>
+                <li class="dropdown-option" data-value="business-rates">Business rates</li>
+              </ul>
+            </div>
+          </div>
         </article>
 
         <article class="card action-card">
@@ -115,7 +134,7 @@
           <div class="tab-divider"></div>
           <div class="tab-panels">
             <div class="tab-panel active" id="panel-housing">
-              <p>Find information and apply for council housing, report repairs, and get support with your tenancy — all
+              <p>Find information and apply for council housing, report repairs, and get support with your tenancy, all
                 in one place.</p>
               <div class="links-grid">
                 <div class="links-col">

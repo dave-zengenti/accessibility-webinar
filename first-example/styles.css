@@ -162,6 +162,13 @@ a {
   color: #9AA0A6;
 }
 
+/* Focus indicator: one clear, consistently visible ring on every interactive
+   element. (second-example deliberately varies this; this build does not.) */
+:focus-visible {
+  outline: 3px solid #1A1A1A;
+  outline-offset: 2px;
+}
+
 /* Cards */
 .cards-row {
   display: grid;
@@ -265,6 +272,78 @@ a {
 .btn-primary {
   background: var(--teal);
   color: #fff;
+}
+
+/* "Select a service" dropdown.
+   Built from plain divs with click-only handlers: no tabindex, no roles,
+   no key handling, so Tab skips straight past it. Mouse-only by design. */
+.service-select {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.service-select-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-size: 15px;
+  color: var(--heading);
+  cursor: pointer;
+}
+
+.dropdown-caret {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.dropdown.open .dropdown-caret {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 20px rgba(26, 26, 26, 0.14);
+  z-index: 20;
+}
+
+.dropdown-option {
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  color: var(--heading);
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background: var(--section);
 }
 
 /* Popular services */
