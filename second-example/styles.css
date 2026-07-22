@@ -833,3 +833,122 @@ a {
 [hidden] {
   display: none !important;
 }
+
+/* ===================================================================
+   DELIBERATELY RIGID LAYOUT (second-example only)
+
+   The page is pinned to a fixed pixel width while key boxes are sized
+   in vw with fixed heights. At 100% zoom on a desktop this looks
+   correct. At 200% zoom the CSS viewport halves (1280px -> 640px) and
+   the layout fails badly:
+     - the fixed-width page forces a HORIZONTAL SCROLLBAR
+     - vw-sized boxes shrink, text reflows past its fixed height and is
+       CLIPPED MID-SENTENCE
+     - the hero grows past its fixed height and OVERLAPS the cards below
+   None of this is visible to an automated scan (no rule covers reflow),
+   so the page still scores 100.
+   =================================================================== */
+
+.container {
+  width: 1180px;
+  max-width: none;
+  padding: 0 60px;
+}
+
+/* Hero: fixed height with an absolutely positioned vw-width panel.
+   Narrow the viewport and it outgrows the hero and spills over. */
+.hero {
+  height: 380px;
+  min-height: 0;
+  display: block;
+  overflow: visible;
+  padding: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  max-width: none;
+  padding: 32px;
+}
+
+/* Fixed heading size: it no longer scales down, so it wraps and grows. */
+.hero-content h1 {
+  font-size: 52px;
+}
+
+/* Cards: vw widths that never wrap, with paragraphs pinned to a fixed
+   height so they are cut off mid-sentence once the text reflows. */
+.cards-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.action-card {
+  width: 26vw;
+  padding: 24px;
+}
+
+.card-text p {
+  height: 44px;
+  overflow: hidden;
+}
+
+/* News: same treatment. */
+.news-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.news-card {
+  width: 26vw;
+}
+
+.news-summary {
+  height: 44px;
+  flex: none;
+  overflow: hidden;
+}
+
+/* Header, tabs and footer stop wrapping, so they overflow instead. */
+.header-inner {
+  flex-wrap: nowrap;
+}
+
+.tabs-row {
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.footer-fine {
+  flex-wrap: nowrap;
+}
+
+/* Report page: rigid two-column split again. */
+.main-two-col {
+  flex-wrap: nowrap;
+  gap: 80px;
+}
+
+.form-column {
+  width: 680px;
+  flex: none;
+  max-width: none;
+}
+
+.aside {
+  width: 360px;
+  flex: none;
+  max-width: none;
+}
