@@ -128,8 +128,9 @@ The tab order tells a story. Do not reorder it.
 - **Dialog**: `role="dialog"` plus an accessible name, but on open focus is not moved in,
   there is no trap and the background is not inert. Close button keeps `aria-label="Close"`.
 - **Vague and useless text alternatives**: `alt="logo"` (does not convey destination), and
-  all three news images `alt="image"`. Every image has alt, so the scan is clean, but none
-  of it tells a screen reader user anything.
+  the three news images carry filename-style placeholders (`alt="new-image-001"` and so
+  on), the kind of thing a CMS generates automatically. Every image has a non-empty alt,
+  so the scan is clean, but none of it tells a screen reader user anything.
 - **Placeholder-as-label** on the report form.
 - **Three identical "Read more" links**: pass the link-name check, fail link purpose.
 - **Reflow collapse at 200% zoom**, below.
