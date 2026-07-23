@@ -1,113 +1,193 @@
-# Accessibility demo — Northcombe District Council (two builds)
+# Accessibility demo: Northcombe District Council (two builds)
 
 ## What this is
 
-This repo contains two intentionally-different builds of the SAME council website,
-used in a live accessibility training webinar to demonstrate the gap between automated
-scanning (the product, Insytful) and manual testing (the service).
+Two builds of the SAME council website, used in a live accessibility webinar to show the
+gap between automated scanning (the product, Insytful) and manual testing (the service).
 
-- `./first-example` — the "raw" site. Must FAIL an automated scan on the six errors below.
-- `./second-example` — the same site after remediation. Must PASS an automated scan, yet still
-  FAIL manual testing.
+- `./first-example` (DEMO 1): the raw site. FAILS an automated scan.
+- `./second-example` (DEMO 2): the same site "remediated". PASSES an automated scan with
+  a perfect score, yet fails badly under manual testing.
 
-The accessibility failures are the deliverable, not bugs.
+**The accessibility failures are the deliverable, not bugs.**
 
-## Prime directive (read before every task)
+This file describes what is ACTUALLY BUILT, not the original brief. It has been revised
+as the demo evolved. If you change the demos, update this file to match.
 
-- NEVER add, restore, or "improve" accessibility beyond what each spec below states.
-  Do not add `alt`, `<label>`, `aria-*`, `lang`, focus styles, or keyboard handlers
-  except exactly where a spec line says to.
-- The failures must be reproduced EXACTLY and ONE CLEAN INSTANCE of each — do not let
-  a pattern (e.g. muted body text, icon-only controls) leak extra instances elsewhere.
-- On ANY later/refinement task, re-read this file and re-verify every listed failure
-  still exists before you finish. Never silently remediate.
-- After building each demo, output a checklist (see Acceptance) confirming state.
+## Prime directive
+
+- NEVER "improve" accessibility. Do not add `alt`, `<label>`, `aria-*`, `lang`, focus
+  styles or keyboard handlers unless a change explicitly asks for it.
+- Before finishing ANY task, re-verify every failure below still exists. Never silently
+  remediate. If a change would remove one, say so and ask.
+- Instance counts below are deliberate. Several failures appear more than once on purpose
+  (see DEMO 1 contrast, alt and empty links). Do not "tidy" them down to one each.
+- DEMO 2 must keep scoring 100 in an automated scan. Any new focusable element needs an
+  accessible name, or the score breaks.
 
 ## Tech
 
-Plain static HTML + CSS + minimal vanilla JS. No framework, no build step. Each demo:
-`index.html` (home), `report.html` (form page), `styles.css`, `script.js`.
-Must run from a simple static server / `file://`. This keeps failures stable and
-hand-verifiable. Implement the Pencil design in this repo if present; otherwise build
-to the layout summary at the bottom.
+Plain static HTML, CSS and vanilla JS. No framework, no build step. Each demo has
+`index.html`, `report.html`, `styles.css`, `script.js`. Runs from any static server.
+Deployed via GitHub Pages from `main`.
+
+## Shared design (both demos)
+
+The two builds must look **identical at 100% zoom at any window width**. Layout is fluid:
+container padding `clamp(20px, 5vw, 72px)`, `auto-fit` grids for cards and news,
+icon-above-title cards, squarish corners and light shadows for a govtech feel.
+
+Insytful renders the page in an iframe (roughly 640 to 700px) beside its issues panel,
+so both builds must also look good at that width.
+
+Home page sections: header (linked logo lockup, nav, magnifier search button), hero,
+three action cards (Report it / Select a service / Find your bin day), "Popular services"
+tabs, "Latest news", dark teal footer. `report.html` has the "Report a problem" form and a
+confirmation dialog. Palette: teal `#0F5C6B`, dark teal `#0A4651`, headings `#1A1A1A`.
+
+The middle action card is a **custom "Select a service" dropdown** in BOTH builds: plain
+`div`/`ul`/`li`, no `tabindex`, no ARIA roles, click-only handlers. It is mouse-only by
+design and Tab skips it entirely. It carries no ARIA, so no scanner sees anything wrong.
 
 ---
 
-## ./first-example — RAW (must fail on all six)
+## DEMO 1: first-example (must FAIL a scan)
 
-One clean instance of each:
+Six categories, matching the "96% of errors" talking point:
 
-1. **Missing document language** — `<html>` with NO `lang` attribute, both pages.
-2. **Low contrast text** — the hero intro paragraph only, colour `#9AA0A6` on white
-   (~2.6:1). This is the ONLY failing-contrast text: render news-card summaries and
-   footer fine-print at a PASSING colour so they don't add duplicate instances.
-3. **Missing alt** — the FIRST news-card thumbnail `<img>` has no `alt` attribute.
-   Every other content image gets proper `alt`.
-4. **Empty link** — the header logo is a single linked image lockup (crest + wordmark
-   baked into ONE image): `<a href="index.html"><img src="logo.svg" alt=""></a>`.
-   Empty `alt` = decorative (so this is NOT a missing-alt flag), and the link has no
-   other content → the link has no accessible name → empty link.
-5. **Empty button** — the header search control is a `<button>` containing only the
-   magnifier icon, no text, no `aria-label`.
-6. **Missing form label** — on `report.html`, the EMAIL input has no `<label>`, no
-   `aria-label`, and no `placeholder` → no accessible name.
+1. **Missing document language.** `<html>` with no `lang`, both pages.
+2. **Low contrast**, deliberately graded to show that severity matters:
+   - hero intro `#9AA0A6` on white, about **2.64:1**. Borderline, only some people lose it.
+   - footer fine print `#125A67` on the footer's `#0A4651`, about **1.34:1**. Close to
+     invisible for nearly everyone. Sits directly under footer column links at 8.2:1 for
+     an immediate side-by-side. Reports as 6 nodes (two `<p>` plus four `<a>`).
+3. **Missing alt.** All three news thumbnails have no `alt`.
+4. **Empty links.** The logo lockup `<a href="index.html"><img src="logo.svg" alt="">`
+   (empty alt is decorative, so the link has no accessible name), plus the four footer
+   social icon links, which have no `aria-label`.
+5. **Empty button.** Header search `<button>`: magnifier icon only, no text, no `aria-label`.
+6. **Missing form labels**, three instances:
+   - `index.html` postcode: a visible `<label class="postcode-label">` with **no `for`**,
+     and no placeholder on the input, so the label is not associated.
+   - `report.html` email: no label, no `aria-label`, no placeholder.
+   - `report.html` problem type `<select>`: no label and no `aria-label`.
 
-Everything else in first-example must be correct so the six stay isolated: the bin-card
-"Search" button has visible text; footer social icons have `aria-label`s; the dialog
-`×` button has `aria-label="Close"`; all other form fields use placeholder-as-label and
-DO have placeholders (they pass the automated label check on purpose).
+**Passing on purpose in DEMO 1** (do not break these, they keep the failures legible):
+footer column links 8.2:1, card and news body text `#666` at 5.7:1, the bin-day "Search"
+button has visible text, the dialog close button has `aria-label="Close"`, the file input
+has an associated label, and name/postcode/description use placeholder-as-label (which
+passes the automated label check on purpose).
 
-## ./second-example — REMEDIATED (must pass automated, fail manual)
-
-Start from the first-example site, then:
-
-### A. Clean fixes (clear all six automated flags)
-
-- `<html lang="en">` on both pages.
-- Header search button: add `aria-label="Search"`.
-- Hero intro paragraph: darken to `#767676` (~4.54:1, passes AA).
-
-### B. Remediations done badly (pass automated, fail a human)
-
-- News thumbnail: add `alt="image"` — has alt (passes), useless to a screen reader.
-- Logo image: `alt="logo"` — link now has a name so empty-link clears, but the name
-  doesn't convey destination → fails link purpose (2.4.4); SR reads "logo, link".
-- Email field: add `placeholder="Email"` only, still NO `<label>` — now has an
-  accessible name via placeholder (passes automated), but placeholder-as-label fails
-  manual. Rest of form stays placeholder-as-label.
-
-### C. New manual-only failures (automated cannot see these)
-
-- **No visible focus** — global `*:focus { outline: none; }` with no replacement focus
-  style. (2.4.7)
-- **Tabs with no roving tabindex** — "Popular services" uses FULL, valid ARIA tab
-  markup (`role="tablist|tab|tabpanel"`, `aria-selected`, `aria-controls`,
-  `aria-labelledby`) so automated ARIA checks pass — BUT implement NO roving tabindex
-  and NO arrow-key handling; switching is click-only. Keyboard users can't drive it.
-- **Dialog with no focus management** — the "report sent" confirmation has
-  `role="dialog"` + an accessible name (so automated passes), but on open: focus stays
-  on the trigger, focus is NOT moved into the dialog, there is NO focus trap, and the
-  background is NOT inert. `×` keeps `aria-label="Close"`. (2.4.3 / focus management)
-- **"Read more" links** — three identical "Read more" links: pass the empty-link check
-  (they have text) but fail link purpose in context (2.4.4 / 2.4.9). Leave as-is.
+**Also in DEMO 1, not scanner-visible:** one clear focus ring everywhere
+(`:focus-visible { outline: 3px solid #1A1A1A }`, no faint or missing variants), three
+generic "Read more" links, the mouse-only dropdown, and a confirmation dialog that DOES
+manage focus properly (moves focus in, traps it, restores it). DEMO 1 is deliberately the
+better build for keyboard users.
 
 ---
 
-## Acceptance — output after each build
+## DEMO 2: second-example (must PASS a scan, fail manual)
 
-- first-example: confirm each of the six is present, one instance, isolated.
-- second-example: confirm each of the six automated flags is CLEARED, and each manual failure
-  in B + C is PRESENT.
-- Flag any place a failure leaked beyond its single intended instance.
+### Automated flags cleared
 
-## Layout summary (if no Pencil source present)
+`lang="en"` both pages; search button `aria-label="Search"`; hero intro `#767676`
+(4.54:1); footer fine print `#A8C2C8` (5.59:1); all news images have `alt`; logo
+`alt="logo"`; all four social links have `aria-label`; postcode label associated via
+`for`; email `placeholder="Email"`; problem type select `aria-label="Problem type"`.
 
-Desktop only, 1440px. Header (linked image logo lockup left; magnifier search button +
-nav right). Hero (heading "Council services, all in one place" + muted intro + faint
-high-street bg). Three action cards: Report it / Pay / Find your bin day (bin card has
-inline postcode field + "Search"). "Popular services" tabbed panel (Housing / Planning
-/ Roads & parking). "Latest news" three cards (thumbnail + headline + summary + "Read
-more"). Dark-teal footer (social icon links, link columns, fine print). Cookie banner
-on load. report.html: "Report a problem" form (full name, email, postcode, type
-dropdown, description, file upload, "Send report"), placeholder-as-label, confirmation
-dialog with `×` close. Palette: teal #0F5C6B, amber #E8A33D, headings #1A1A1A.
+### Manual failures: keyboard focus
+
+The tab order tells a story. Do not reorder it.
+
+| Tab | Element | Focus treatment |
+|-----|---------|-----------------|
+| 1 to 3 | logo, Home, Services | good ring, 3px `#1A1A1A` |
+| 4 | News nav link | `.focus-faint`, 1px `#EDF0F1`, about 1.1:1 |
+| 5 | Contact nav link | `.focus-none`, nothing |
+| 6 | header search button | `.focus-none`, nothing (keeps its `aria-label`) |
+| 7, 8 | two `.utility-links` | focusable but INVISIBLE, nothing on screen at all |
+| 9 | "Report a problem" | good ring |
+| -- | "Select a service" dropdown | **SKIPPED, not focusable** |
+| 10, 11 | postcode input, "Search" | good ring |
+
+- The `.utility-links` are real links with real text, clipped to a 1x1 box that never
+  reveals on focus. They are **not** `aria-hidden`: focusable content inside `aria-hidden`
+  is `aria-hidden-focus`, one of the few things a scanner would catch.
+- **Stops 9, 10 and 11 are protected.** They bracket the dropdown and are what proves it
+  is skipped. Never insert a focusable element between "Report a problem" and the
+  postcode input, and never remove their focus rings.
+
+### Manual failures: everything else
+
+- **Dropdown**: mouse-only, as described under Shared design. This is the centrepiece.
+- **Tabs**: full valid ARIA (`role="tablist|tab|tabpanel"`, `aria-selected`,
+  `aria-controls`, `aria-labelledby`) so ARIA checks pass, but click-only. Inactive tabs
+  get `tabindex="-1"` and there is no arrow-key handling, so a keyboard user can never
+  switch tab.
+- **Dialog**: `role="dialog"` plus an accessible name, but on open focus is not moved in,
+  there is no trap and the background is not inert. Close button keeps `aria-label="Close"`.
+- **Vague and useless text alternatives**: `alt="logo"` (does not convey destination),
+  first news image `alt="image"`.
+- **Placeholder-as-label** on the report form.
+- **Three identical "Read more" links**: pass the link-name check, fail link purpose.
+- **Reflow collapse at 200% zoom**, below.
+
+### Zoom breakage (DEMO 2 only)
+
+`script.js` measures **actual browser zoom**, not viewport width: zoom shrinks the
+viewport while the window chrome stays put, so `outerWidth / innerWidth` gives the factor.
+At 1.5 and above it puts `.zoomed` on `<html>`. Detection is skipped inside an iframe,
+where that ratio would measure the frame instead.
+
+This matters: because it keys off zoom rather than width, DEMO 2 is identical to DEMO 1
+at 100% on any monitor and inside the Insytful frame. Earlier versions inferred zoom from
+width and broke on wide screens and in the embed. **Do not go back to width-based rules.**
+
+When `.zoomed` applies: `body` gets `min-width: 1500px` (horizontal scrollbar), the hero
+becomes a short fixed box with a narrow panel and a 64px heading at `line-height: 0.55`
+and `letter-spacing: -5px` (lines and letters overlap), every section gets a large
+negative `margin-top` so bands pile onto each other, cards become fixed width with
+`-130px` margins so they stack, and card paragraphs are clipped at a fixed height.
+
+Nothing here is scanner-visible: no rule covers reflow or text spacing.
+
+---
+
+## The only intended differences between the two stylesheets
+
+`diff first-example/styles.css second-example/styles.css` should show these and nothing
+else. Anything else is drift.
+
+1. `.hero-intro` colour (`#9AA0A6` vs `#767676`).
+2. `.footer-fine` colour (`#125A67` vs `#A8C2C8`).
+3. Focus scheme: DEMO 1 has one good ring; DEMO 2 adds `.focus-faint` and `.focus-none`.
+4. `.utility-links` block, DEMO 2 only.
+5. `.zoomed` block, DEMO 2 only.
+6. `.help-card h3` vs `.help-card h2`, matching each build's own `report.html` markup.
+
+---
+
+## Verification
+
+After any change, confirm and report:
+
+- DEMO 1: all six categories still fire, with the instance counts above.
+- DEMO 2: scan is clean (no missing `lang`, alt, accessible names or duplicate IDs, and
+  no text under 4.5:1), and every manual failure above is still present.
+- Both builds still look identical at 100% at 1280px and at a wide width such as 1920px.
+- DEMO 2 still collapses when `.zoomed` is applied.
+
+Quickest check is to serve the repo root and read computed styles in the browser. To test
+the zoomed state without a real browser zoom, override `innerWidth`/`outerWidth` to a 2:1
+ratio and dispatch a `resize` event, which exercises the real detection path.
+
+## Gotchas
+
+- **Caching.** Browsers hold on to `styles.css` and `script.js` hard, and GitHub Pages
+  caches too. Hard-refresh, or serve from a fresh port, before concluding a change failed.
+- **Never `aria-hidden` anything focusable.** That is a real scanner failure and would
+  cost DEMO 2 its perfect score.
+- **Presenting:** zoom with Ctrl or Cmd and `+`. Trackpad pinch-zoom does not change
+  `outerWidth`/`innerWidth`, so it will not trigger the breakage.
+- Focusing the invisible `.utility-links` nudges the page toward the top, since browsers
+  scroll focused elements into view.
