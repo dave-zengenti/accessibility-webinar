@@ -91,9 +91,10 @@ better build for keyboard users.
 ### Automated flags cleared
 
 `lang="en"` both pages; search button `aria-label="Search"`; hero intro `#767676`
-(4.54:1); footer fine print `#A8C2C8` (5.59:1); all news images have `alt`; logo
-`alt="logo"`; all four social links have `aria-label`; postcode label associated via
-`for`; email `placeholder="Email"`; problem type select `aria-label="Problem type"`.
+(4.54:1); footer fine print `#A8C2C8` (5.59:1); all three news images have `alt` (all of
+it useless, see below); logo `alt="logo"`; all four social links have `aria-label`;
+postcode label associated via `for`; email `placeholder="Email"`; problem type select
+`aria-label="Problem type"`.
 
 ### Manual failures: keyboard focus
 
@@ -126,8 +127,9 @@ The tab order tells a story. Do not reorder it.
   switch tab.
 - **Dialog**: `role="dialog"` plus an accessible name, but on open focus is not moved in,
   there is no trap and the background is not inert. Close button keeps `aria-label="Close"`.
-- **Vague and useless text alternatives**: `alt="logo"` (does not convey destination),
-  first news image `alt="image"`.
+- **Vague and useless text alternatives**: `alt="logo"` (does not convey destination), and
+  all three news images `alt="image"`. Every image has alt, so the scan is clean, but none
+  of it tells a screen reader user anything.
 - **Placeholder-as-label** on the report form.
 - **Three identical "Read more" links**: pass the link-name check, fail link purpose.
 - **Reflow collapse at 200% zoom**, below.
