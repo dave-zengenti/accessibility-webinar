@@ -19,7 +19,7 @@
         <a href="news.html" class="nav-link focus-faint">News</a>
         <a href="contact.html" class="nav-link focus-none">Contact</a>
         <span class="nav-divider" aria-hidden="true"></span>
-        <button class="search-btn" type="button" aria-label="Search">
+        <button class="search-btn focus-none" type="button" aria-label="Search">
           <svg class="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="11" cy="11" r="8"></circle>
@@ -29,6 +29,14 @@
       </nav>
     </div>
   </header>
+
+  <!-- Off-screen utility links: focusable but never revealed, so keyboard
+       focus vanishes entirely for two tab stops. Real link text and a
+       passing colour, so an automated scan sees nothing wrong here. -->
+  <div class="utility-links">
+    <a href="accessibility.html">Accessibility options</a>
+    <a href="text-size.html">Change text size</a>
+  </div>
 
   <main>
     <section class="hero">

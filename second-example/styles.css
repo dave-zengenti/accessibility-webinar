@@ -181,6 +181,33 @@ a {
   outline: none;
 }
 
+/* POOR EXAMPLE: focusable but invisible.
+   Clipped rather than display:none, so these stay in the tab order and
+   keyboard focus lands on them with nothing visible anywhere on screen.
+   The usual visually-hidden pattern reveals itself on focus; this one
+   deliberately never does. They keep real link text and a passing
+   colour, and are NOT aria-hidden (focusable content inside aria-hidden
+   is one of the few things an automated scan would catch), so nothing
+   here shows up in a scan. */
+.utility-links {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.utility-links a {
+  color: var(--heading);
+}
+
+.utility-links a:focus,
+.utility-links a:focus-visible {
+  outline: none;
+}
+
 /* Cards */
 .cards-row {
   display: grid;
