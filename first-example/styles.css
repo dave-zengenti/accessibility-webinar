@@ -606,10 +606,15 @@ a {
   border-top: 1px solid #1C6470;
 }
 
+/* SECOND, FAR WORSE CONTRAST FAILURE.
+   #125A67 on the footer's #0A4651 is about 1.3:1, against roughly 2.6:1
+   for the hero intro. The hero is borderline and only some people lose
+   it; this is close to invisible for nearly everyone, which is the
+   point of having an agreed 4.5:1 threshold rather than a judgement call. */
 .footer-fine p,
 .footer-fine a {
   font-size: 12.5px;
-  color: #A8C2C8;
+  color: #125A67;
   margin: 0;
 }
 
