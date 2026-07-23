@@ -87,4 +87,24 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!dropdown.contains(e.target)) setOpen(false);
     });
   }
+
+  // Zoom detection, for the reflow demo.
+  // Browser zoom shrinks the viewport while the window chrome stays the
+  // same size, so outerWidth / innerWidth gives the zoom factor. This is
+  // independent of screen size and of display scaling, so it behaves the
+  // same on any monitor.
+  //
+  // Skipped inside an iframe: there innerWidth is the frame's width, so
+  // the ratio would measure the frame rather than the zoom level and a
+  // narrow embed would be mistaken for a zoomed page.
+  const inFrame = window.self !== window.top;
+
+  function trackZoom() {
+    if (inFrame || !window.outerWidth) return;
+    const factor = window.outerWidth / window.innerWidth;
+    document.documentElement.classList.toggle('zoomed', factor >= 1.5);
+  }
+
+  trackZoom();
+  window.addEventListener('resize', trackZoom);
 });

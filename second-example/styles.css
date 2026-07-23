@@ -835,119 +835,119 @@ a {
 }
 
 /* ===================================================================
-   DELIBERATELY RIGID LAYOUT (second-example only)
+   ZOOMED STATE (second-example only)
 
-   Every value below is wrapped in min() so that at desktop widths it
-   resolves to exactly the figure first-example uses. The two demos are
-   therefore identical at 100% zoom on any monitor. The clamps only bite
-   as the viewport narrows, so at 200% zoom (a 1280px window becomes a
-   640px viewport) the page fails badly:
+   script.js measures browser zoom (outerWidth / innerWidth, since zoom
+   shrinks the viewport while the window chrome stays put) and puts
+   .zoomed on <html> at 150% and above.
 
-     - min-width forces a HORIZONTAL SCROLLBAR
-     - negative section margins pull each band UP over the one above,
-       so the hero, cards, services, news and footer OVERLAP
-     - sibling cards slide ON TOP OF EACH OTHER
-     - card paragraphs reflow past a fixed height and are CLIPPED
-     - line-height and letter-spacing COLLAPSE so text runs together
+   Because this keys off ZOOM rather than viewport width, the page is
+   pixel-identical to first-example at 100% on any monitor and in any
+   narrow frame. Nothing below applies until the user actually zooms,
+   and then the layout falls apart completely:
 
-   Nothing here is visible to an automated scan (no rule covers reflow
-   or text spacing), so the page still scores 100.
+     - fixed min-width forces a HORIZONTAL SCROLLBAR
+     - negative margins drag every band UP over the one above it
+     - cards sit ON TOP OF EACH OTHER
+     - paragraphs are CLIPPED mid-sentence
+     - line-height under 1 makes lines of text OVERLAP each other, and
+       negative letter-spacing runs the letters together
+
+   No automated rule covers reflow or text spacing, so the page still
+   scores 100 either way.
    =================================================================== */
 
-/* Normal width and padding are inherited; the page simply can never be
-   narrower than this, which is what forces the horizontal scrollbar.
-   This sits on body, not .container: the hero panel also carries the
-   container class, and a min-width there would beat its 720px
-   max-width and blow the panel out to full width. */
-body {
-  min-width: 1180px;
+html.zoomed body {
+  min-width: 1500px;
 }
 
-/* Panel is 720px at desktop, exactly as first-example, and only starts
-   shrinking below ~1240px. */
-.hero-content {
-  width: min(720px, 58vw);
+/* Hero: short fixed box with a narrow panel, so the heading wraps hard
+   and pours out over everything below it. */
+html.zoomed .hero {
+  height: 300px;
+  min-height: 0;
+  overflow: visible;
 }
 
-/* 60px matches first-example's clamp ceiling but never scales down. */
-.hero-content h1 {
-  font-size: 60px;
-  line-height: min(63px, 5vw);
-  letter-spacing: min(0px, 0.55vw - 7px);
+html.zoomed .hero-content {
+  width: 380px;
+  max-width: none;
+  padding: 18px;
 }
 
-.hero-intro {
-  line-height: min(29.45px, 2.3vw);
-  letter-spacing: min(0px, 0.12vw - 1.55px);
+html.zoomed .hero-content h1 {
+  font-size: 64px;
+  line-height: 0.55;
+  letter-spacing: -5px;
+  margin-bottom: 8px;
 }
 
-.section-header h2 {
-  line-height: min(51px, 4vw);
-  letter-spacing: min(-0.5px, 0.2vw - 3.06px);
+html.zoomed .hero-intro {
+  line-height: 0.75;
+  letter-spacing: -1.2px;
 }
 
-/* Sections pull up over the one above. Zero at desktop, sharply
-   negative once zoomed, so the whole page concertinas together. */
-.action-cards {
-  margin-top: min(0px, 25vw - 320px);
+/* Every band is dragged up over the one above it. */
+html.zoomed .action-cards {
+  margin-top: -230px;
 }
 
-.popular-services,
-.latest-news,
-.site-footer {
-  margin-top: min(0px, 20vw - 256px);
+html.zoomed .popular-services,
+html.zoomed .latest-news,
+html.zoomed .site-footer {
+  margin-top: -200px;
 }
 
-/* Flex with flex:1 1 0 renders identically to first-example's grid at
-   desktop, but the vw cap squeezes the cards once zoomed. */
-.cards-row,
-.news-row {
+/* Cards stop sharing space and start stacking on each other. */
+html.zoomed .cards-row,
+html.zoomed .news-row {
   display: flex;
-  gap: 24px;
+  gap: 0;
+  padding-top: 0;
 }
 
-.action-card,
-.news-card {
-  flex: 1 1 0;
-  max-width: 27vw;
+html.zoomed .action-card,
+html.zoomed .news-card {
+  flex: none;
+  width: 290px;
+  max-width: none;
+  padding: 16px;
 }
 
-/* Cards slide on top of each other: zero at desktop, sharply negative
-   as the viewport narrows. */
-.action-card + .action-card,
-.news-card + .news-card {
-  margin-left: min(0px, 13vw - 166px);
+html.zoomed .action-card + .action-card,
+html.zoomed .news-card + .news-card {
+  margin-left: -130px;
 }
 
-.card-text h2,
-.news-body h3 {
-  line-height: min(30px, 2.35vw);
-  letter-spacing: min(0px, 0.15vw - 1.92px);
+/* Text spacing collapses: lines overlap, letters run together. */
+html.zoomed .section-header h2 {
+  line-height: 0.55;
+  letter-spacing: -3px;
 }
 
-/* Two lines fit comfortably at desktop; once the card narrows the text
-   reflows past this and is cut off mid-sentence. */
-.card-text p {
-  height: 46px;
+html.zoomed .card-text h2,
+html.zoomed .news-body h3 {
+  line-height: 0.6;
+  letter-spacing: -2px;
+}
+
+html.zoomed .card-text p {
+  height: 32px;
   overflow: hidden;
+  line-height: 0.85;
+  letter-spacing: -0.8px;
 }
 
-.card-text p,
-.news-summary {
-  line-height: min(22.5px, 1.75vw);
-  letter-spacing: min(0px, 0.12vw - 1.55px);
+html.zoomed .news-summary,
+html.zoomed .tab-panel p {
+  line-height: 0.8;
+  letter-spacing: -0.8px;
 }
 
-.tab-panel p {
-  line-height: min(25.5px, 2vw);
-  letter-spacing: min(0px, 0.12vw - 1.55px);
-}
-
-/* Header, tabs and the report columns stop wrapping, so they overflow
-   rather than reflowing politely. */
-.header-inner,
-.tabs-row,
-.main-two-col {
+/* Nothing reflows politely any more. */
+html.zoomed .header-inner,
+html.zoomed .tabs-row,
+html.zoomed .main-two-col {
   flex-wrap: nowrap;
 }
 
